@@ -1,5 +1,213 @@
-.remote-red-text {
+/*---HEADINGS---*/
+.h1 {
+	font-family: "Bricolage Grotesque", sans-serif !important;
+	font-weight: 800 !important;
+}
+
+.red-text {
 	font-weight: bold !important;
 	color: red !important;
 	font-size: 50px !important;
+}
+
+.h1 s {
+	position: relative;
+	/* Ensure the pseudo-element is positioned relative to the text */
+	color: #000000;
+	/* Set the text color to black */
+	text-decoration: none;
+	/* Remove default strikethrough styling */
+	font-weight: bold;
+	/* Adjust weight to match the desired design */
+	z-index: 2;
+}
+
+.h1 s::before {
+	content: "";
+	/* Add a visual element */
+	position: absolute;
+	/* Position it relative to the text */
+	left: 0;
+	bottom: 0.1em;
+	/* Adjust as needed for alignment */
+	width: 100%;
+	/* Match the width of the text */
+	height: 0.3em;
+	/* Thickness of the highlight */
+	background: linear-gradient(90deg, #7fff9f, rgba(127, 255, 159, 0));
+	/* Gradient from green to transparent */
+	z-index: -1;
+	/* Place the highlight behind the text */
+}
+
+/*---CUSTOM BUTTONs---*/
+.custom-button {
+	background-color: #27ff8c !important;
+	color: #000000 !important;
+	font-size: 25px !important;
+	font-family: "Bricolage Grotesque", sans-serif !important;
+	font-weight: 800 !important;
+	padding: 15px 50px !important;
+	border-radius: 20px !important;
+	border: 3px solid #43cfae !important;
+	box-shadow: 0 4px 0 #4d14d2, 0 8px 0 #ac93f1, 0 10px 15px rgba(0, 0, 0, 0.1);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-button-small {
+	font-family: "Bricolage Grotesque", sans-serif !important;
+	padding-top: 2.5px !important;
+	padding-bottom: 5px !important;
+	padding-left: 5px !important;
+	padding-right: 10px !important;
+	text-transform: uppercase !important;
+	font-size: 14px !important;
+	font-weight: 600 !important;
+	border-radius: 5px !important;
+	background-color: #4d14d2 !important;
+	color: #ffffff !important;
+	box-shadow: none;
+	border: none !important;
+}
+
+.custom-button .main-heading-group .button-icon-end {
+	font-size: 22px;
+	margin-left: 10px;
+	color: #4d14d2 !important;
+	/* Space between text and arrow */
+	transition: margin-left 0.2s ease;
+}
+
+.custom-button-small .main-heading-group .button-icon-end {
+	font-size: 18px;
+	margin-left: 10px;
+	color: #27ff8c !important;
+}
+
+.custom-button:hover .main-heading-group .button-icon-end {
+	margin-left: 15px;
+	/* Move the arrow slightly on hover */
+}
+
+.custom-button:hover {
+	transform: translateY(-2px);
+	/* Slight lift on hover */
+	/* Adjust shadow on hover */
+	box-shadow: 0 6px 0 #4d14d2, 0 10px 0 #ac93f1, 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.custom-button:active {
+	transform: translateY(2px);
+	/* Slight push down on click */
+	box-shadow: 0 4px 0 #4d14d2, 0 6px 10px rgba(0, 0, 0, 0.2);
+	/* Reduced shadow on active */
+}
+
+.custom-button-small:hover {
+	transform: translateY(-1px);
+	/* Slight lift on hover */
+	/* Adjust shadow on hover */
+	box-shadow: none;
+}
+
+.custom-button-small:active {
+	transform: translateY(1px);
+	box-shadow: none;
+}
+
+/*---BLOG---*/
+/* Blog items container */
+.c-blog .hl-blog .blog-items-container {
+	max-width: 100%;
+}
+
+/* Blog row */
+.hl-blog .blog-items .blog-row {
+	flex-wrap: nowrap;
+}
+
+/* Blog item */
+.blog-items .blog-item {
+	padding: 10px !important;
+}
+
+/* Blog item texts */
+.blog-items .blog-item .blog-item-texts {
+	padding: 10px !important;
+}
+
+/* Blog item box 2 */
+.blog-items .blog-item .blog-item-box-2 {
+	margin-top: 0px !important;
+}
+
+/*---FEATURED PRODUCTS---
+/* Link */
+.hl-product-list-item {
+	margin-bottom: 0px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #e0e0e0;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.hl-product-list-item:hover {
+	background-color: #f2f2f2;
+}
+
+/*---CATEGORIES---
+/* Link */
+.ccollection-list-0af6fQ0XBU a {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d6d6d6;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/* Paragraph */
+.ccollection-list-0af6fQ0XBU div p {
+	font-weight: 600 !important;
+}
+
+.ccollection-list-0af6fQ0XBU a:hover {
+	background-color: #f9f9f9;
+}
+
+/*---LABELS---*/
+/* Paragraph */
+.black-label {
+	background-color: #000000 !important;
+	display: inline-block !important;
+	border-radius: 10px !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+}
+
+/*---UTILITIES---*/
+.overflow-hidden {
+	overflow: hidden !important;
+}
+
+.inline-block {
+	display: inline-block !important;
+}
+
+.max-width {
+	max-width: 850px;
 }
